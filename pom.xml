@@ -8,18 +8,21 @@
 		<version>3.2.3</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>inc.temp.right.always</groupId>
-	<artifactId>rest-api</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>rest-api</name>
-	<description>A REST-API for access to the anomalies database.</description>
+
 	<properties>
 		<java.version>17</java.version>
 	</properties>
+
+	<groupId>inc.temp.right.always</groupId>
+	<artifactId>rest-cassandra-api</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>rest-api</name>
+	<description>A Cassandra-based REST-API for access to the anomalies database.</description>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
+
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -35,6 +38,17 @@
 			<artifactId>lombok</artifactId>
 			<optional>true</optional>
 		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.retry</groupId>
+			<artifactId>spring-retry</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-aspects</artifactId>
+		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>

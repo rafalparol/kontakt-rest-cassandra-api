@@ -1,0 +1,6 @@
+main:
+  config:
+    cassandra:
+      keyspace-name: temperature
+      port: 9042
+      contact-point: 172.17.0.3
